@@ -154,9 +154,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const flowDetails = {
     1: '<strong>Uso do produto:</strong> escolher aparelhos duráveis, usar capa e película, manter o sistema atualizado e cuidar da bateria fazem o equipamento durar mais e adiam o descarte.',
     2: '<strong>Descarte correto:</strong> separe o aparelho do lixo comum, faça backup, apague seus dados e entregue o produto desligado. Pilhas e baterias vão em coletores próprios.',
-    3: '<strong>Ponto de coleta:</strong> o aparelho é deixado em um PEV, na loja que vende eletrônicos ou em um ecoponto da prefeitura. Muitas lojas de eletrônicos têm coletores para isso.',
-    4: '<strong>Triagem:</strong> os aparelhos são separados por tipo e desmontados. Componentes perigosos, como baterias, são retirados com segurança antes da reciclagem.',
-    5: '<strong>Reciclagem e reaproveitamento:</strong> metais como cobre, ouro e ferro, além de plásticos e vidro, voltam para a indústria como matéria-prima, fechando o ciclo.'
+    3: '<strong>Ponto de coleta:</strong> o aparelho é deixado em um PEV, em uma loja com coletor ou em um ecoponto da prefeitura.',
+    4: '<strong>Triagem:</strong> os aparelhos são separados por tipo e desmontados, e os componentes perigosos, como as baterias, são retirados antes da reciclagem.',
+    5: '<strong>Reciclagem e reaproveitamento:</strong> materiais como metais e plásticos podem voltar para a indústria como matéria-prima, fechando o ciclo.'
   };
 
   const flowTabs = Array.from(document.querySelectorAll('button.flow-step'));
@@ -216,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       q: 'Seu celular está lento. Você...',
       options: ['Troca logo por um novo', 'Espera um pouco e decide depois', 'Libera espaço, atualiza ou leva para conserto'],
-      why: 'Lentidão costuma ter solução: liberar espaço, atualizar o sistema ou trocar a bateria pode estender a vida útil do aparelho e adiar um novo resíduo.'
+      why: 'Muitas vezes a lentidão tem solução: liberar espaço, atualizar o sistema ou trocar a bateria pode estender a vida útil do aparelho e adiar um novo resíduo.'
     },
     {
       q: 'Você tem um eletrônico parado em casa, ainda funcionando. Você...',
@@ -226,12 +226,12 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       q: 'Na hora de descartar um eletrônico quebrado, você...',
       options: ['Coloca junto com o lixo comum', 'Deixa na calçada para alguém levar', 'Leva a um ponto de coleta ou à loja'],
-      why: 'Eletrônicos têm metais pesados e não devem ir para o lixo comum nem ficar na rua. O destino certo é um ponto de coleta ou uma loja com coletor.'
+      why: 'Eletrônicos podem conter substâncias perigosas e não devem ir para o lixo comum nem ficar na rua. O destino certo é um ponto de coleta.'
     },
     {
       q: 'E as pilhas e baterias usadas?',
       options: ['Vão para o lixo do banheiro ou da cozinha', 'Ficam juntas num pote, sem destino certo', 'Vão para um coletor específico'],
-      why: 'Pilhas e baterias contêm substâncias tóxicas e têm coletores próprios, geralmente em supermercados, farmácias e lojas de eletrônicos.'
+      why: 'Pilhas e baterias fazem parte da logística reversa obrigatória da Lei nº 12.305/2010 e devem ir para coletores específicos.'
     },
     {
       q: 'Ao comprar um eletrônico novo, você...',
