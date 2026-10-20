@@ -2,6 +2,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  // 0. TEMA CLARO / ESCURO
+  // O tema salvo já foi aplicado no <head>, antes da página aparecer.
+  const root = document.documentElement;
+  const themeToggle = document.getElementById('themeToggle');
+
+  const syncThemeButton = () => {
+    const dark = root.getAttribute('data-theme') === 'escuro';
+    themeToggle.setAttribute('aria-pressed', String(dark));
+    themeToggle.setAttribute('aria-label', dark ? 'Ativar tema claro' : 'Ativar tema escuro');
+    themeToggle.title = dark ? 'Tema claro' : 'Tema escuro';
+  };
+
+  if (themeToggle) {
+    syncThemeButton();
+    themeToggle.addEventListener('click', () => {
+      const dark = root.getAttribute('data-theme') !== 'escuro';
+      if (dark) root.setAttribute('data-theme', 'escuro');
+      else root.removeAttribute('data-theme');
+      try { localStorage.setItem('tecnociclo-tema', dark ? 'escuro' : 'claro'); } catch (e) { /* navegação privada */ }
+      syncThemeButton();
+    });
+  }
+
   // 1. NAVEGAÇÃO MOBILE E ACESSIBILIDADE
   const menuButton = document.getElementById('menuToggle');
   const navLinks = document.getElementById('navLinks');
@@ -127,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
     sceneToggle.addEventListener('click', () => {
       const paused = scene.classList.toggle('paused');
       sceneToggle.setAttribute('aria-pressed', String(paused));
-      sceneToggle.querySelector('.toggle-icon').textContent = paused ? '▶' : '❚❚';
+      sceneToggle.querySelector('.toggle-icon use').setAttribute('href', paused ? '#i-play' : '#i-pause');
       sceneToggle.querySelector('.toggle-text').textContent = paused ? 'Continuar animação' : 'Pausar animação';
     });
 
@@ -241,10 +264,10 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   const profiles = [
-    { min: 9, title: '🌱 Guardião da Tecnologia', text: 'Você já pensa no ciclo completo antes de descartar. Compartilhe esse conhecimento!' },
-    { min: 6, title: '♻️ Usuário Consciente', text: 'Você está no caminho certo. Falta pouco para fechar o ciclo.' },
-    { min: 3, title: '🔎 Explorador do Ciclo', text: 'Algumas mudanças de hábito já farão grande diferença. Veja as dicas abaixo.' },
-    { min: 0, title: '🚀 Começo de Jornada', text: 'Agora que conhece a campanha, você sabe por onde começar.' }
+    { min: 9, icon: 'sprout', title: 'Guardião da Tecnologia', text: 'Você já pensa no ciclo completo antes de descartar. Compartilhe esse conhecimento!' },
+    { min: 6, icon: 'recycle', title: 'Usuário Consciente', text: 'Você está no caminho certo. Falta pouco para fechar o ciclo.' },
+    { min: 3, icon: 'search', title: 'Explorador do Ciclo', text: 'Algumas mudanças de hábito já farão grande diferença. Veja as dicas abaixo.' },
+    { min: 0, icon: 'flag', title: 'Começo de Jornada', text: 'Agora que conhece a campanha, você sabe por onde começar.' }
   ];
 
   if (quizApp) {
@@ -259,6 +282,18 @@ document.addEventListener('DOMContentLoaded', () => {
       if (cls) node.className = cls;
       if (text !== undefined) node.textContent = text;
       return node;
+    };
+
+    // ícone do conjunto do site (svg + use)
+    const icon = (name) => {
+      const ns = 'http://www.w3.org/2000/svg';
+      const svg = document.createElementNS(ns, 'svg');
+      svg.setAttribute('class', 'ic');
+      svg.setAttribute('aria-hidden', 'true');
+      const use = document.createElementNS(ns, 'use');
+      use.setAttribute('href', `#i-${name}`);
+      svg.append(use);
+      return svg;
     };
 
     const renderQuestion = (focusTitle) => {
@@ -303,11 +338,13 @@ document.addEventListener('DOMContentLoaded', () => {
       optionButtons.forEach(b => { b.tabIndex = (selected ? b === selected : b === optionButtons[0]) ? 0 : -1; });
 
       const nav = el('div', 'quiz-nav');
-      const back = el('button', 'button ghost', '← Voltar');
+      const back = el('button', 'button ghost');
+      back.append(icon('left'), document.createTextNode(' Voltar'));
       back.type = 'button';
       back.disabled = current === 0;
       const isLast = current === questions.length - 1;
-      const next = el('button', 'button primary', isLast ? 'Ver meu resultado →' : 'Próxima →');
+      const next = el('button', 'button primary');
+      next.append(document.createTextNode(isLast ? 'Ver meu resultado ' : 'Próxima '), icon('right'));
       next.type = 'button';
       next.disabled = answers[current] === null;
       nav.append(back, next);
@@ -378,7 +415,8 @@ document.addEventListener('DOMContentLoaded', () => {
       ring.append(track, value, label);
 
       const headText = el('div');
-      const title = el('h3', 'result-title', profile.title);
+      const title = el('h3', 'result-title');
+      title.append(icon(profile.icon), document.createTextNode(' ' + profile.title));
       title.tabIndex = -1;
       headText.append(title, el('p', 'result-score', `${score} de ${max} pontos. ${profile.text}`));
       scoreWrap.append(ring, headText);
@@ -400,7 +438,7 @@ document.addEventListener('DOMContentLoaded', () => {
         renderQuestion(true);
       });
 
-      const status = el('p', 'sr-only', `Resultado: ${profile.title.replace(/^\S+\s/, '')}, ${score} de ${max} pontos.`);
+      const status = el('p', 'sr-only', `Resultado: ${profile.title}, ${score} de ${max} pontos.`);
       status.setAttribute('role', 'status');
 
       wrap.append(scoreWrap, list, reset, status);
