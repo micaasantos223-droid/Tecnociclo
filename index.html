@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TecnoCiclo — Campanha de conscientização sobre sustentabilidade e descarte correto de lixo eletrônico.">
+  <meta name="theme-color" content="#08110d">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TecnoCiclo | Tecnologia que continua">
+  <meta property="og:description" content="Campanha sobre o descarte correto de lixo eletrônico: dados, legislação, onde descartar e um desafio interativo.">
+  <meta property="og:url" content="https://alvaro-pavelkonski.github.io/Projeto-Integrador-II-Sustentabilidade-Tecnol-gica/">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2378e38c'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='26' text-anchor='middle' fill='%2308110d'%3ETC%3C/text%3E%3C/svg%3E">
+  <title>TecnoCiclo | Campanha de Sustentabilidade Tecnológica</title>
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="read-progress" aria-hidden="true"><span id="readProgress"></span></div>
+
+  <!-- NAVEGAÇÃO FIXA E ACESSÍVEL -->
+  <header class="header">
+    <nav class="nav" aria-label="Navegação Principal">
+      <a class="brand" href="#inicio"><span>TC</span> TecnoCiclo</a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Abrir menu de navegação">
+        <span class="hamburger"></span>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a href="#inicio" class="nav-link">Início</a>
+        <a href="#impactos" class="nav-link">Impactos</a>
+        <a href="#reaproveitamento" class="nav-link">Reaproveitamento</a>
+        <a href="#reciclagem" class="nav-link">Reciclagem</a>
+        <a href="#conscientizacao" class="nav-link">Conscientização</a>
+        <a href="#sustentabilidade" class="nav-link">Sustentabilidade</a>
+        <a href="#referencias" class="nav-link">Fontes</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <!-- 1. HERO / INÍCIO -->
+    <section class="hero" id="inicio">
+      <div class="hero-content fade-in">
+        <div class="eyebrow"><i></i> CAMPANHA DE CONSCIENTIZAÇÃO</div>
+        <h1>TecnoCiclo:<br><em>Tecnologia que continua.</em></h1>
+        <p class="hero-text">Uma iniciativa dedicada à promoção da sustentabilidade digital e ao consumo consciente de eletrônicos no nosso dia a dia.</p>
+        <p class="hero-quote">"O descarte de hoje é o impacto de amanhã. Faça a tecnologia continuar com responsabilidade."</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#cena">Conheça a campanha <span aria-hidden="true">↓</span></a>
+          <a class="button ghost" href="#desafio">Fazer o desafio</a>
+        </div>
+        <ul class="hero-stats" aria-label="Destaques em números">
+          <li><strong>62 mi t</strong><span>de lixo eletrônico no mundo em 2022</span></li>
+          <li><strong>22,3%</strong><span>com reciclagem documentada</span></li>
+          <li><strong>3%</strong><span>de coleta formal no Brasil</span></li>
+        </ul>
+      </div>
+      <div class="device-art fade-in" role="img" aria-label="Ilustração de um celular com a marca TecnoCiclo e o lema Reduza, Reuse, Recicle">
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="screen-top"><span>09:41</span><span>● ● ●</span></div>
+            <div class="leaf">⌁</div>
+            <strong>TECNO<br>CICLO</strong>
+            <small>REDUZA • REUSE • RECICLE</small>
+          </div>
+        </div>
+        <div class="eco-badge">↻ <span>Ciclo<br>Sustentável</span></div>
+      </div>
+    </section>
+
+    <!-- CENA ANIMADA: O CAMINHO DO LIXO ELETRÔNICO -->
+    <section class="scene-section" id="cena" aria-labelledby="cena-titulo">
+      <div class="scene-head fade-in">
+        <div class="eyebrow">VEJA NA PRÁTICA</div>
+        <h2 id="cena-titulo">Um gesto de segundos,<br><em>um impacto de anos.</em></h2>
+      </div>
+
+      <div class="scene" id="scene">
+        <svg class="scene-svg" id="sceneSvg" viewBox="0 0 1200 300" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="sceneTitle sceneDesc">
+          <title id="sceneTitle">Animação: o caminho de um celular descartado</title>
+          <desc id="sceneDesc">Um carro passa por uma rua à noite e o motorista joga um celular pela janela. O aparelho cai na terra e espalha uma mancha de contaminação por metais pesados. Em seguida, um caminhão de coleta recolhe o celular, a mancha desaparece e o aparelho é levado até um ponto de entrega voluntária, o PEV.</desc>
+          <defs>
+            <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#050d09"/>
+              <stop offset="1" stop-color="#12301f"/>
+            </linearGradient>
+            <radialGradient id="toxGrad">
+              <stop offset="0" stop-color="#c04bff" stop-opacity=".9"/>
+              <stop offset=".6" stop-color="#8f2fd1" stop-opacity=".5"/>
+              <stop offset="1" stop-color="#8f2fd1" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="glowGrad">
+              <stop offset="0" stop-color="#b8ff9b" stop-opacity=".7"/>
+              <stop offset="1" stop-color="#78e38c" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="beamGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#ffe9a6" stop-opacity=".35"/>
+              <stop offset="1" stop-color="#ffe9a6" stop-opacity="0"/>
+            </linearGradient>
+            <pattern id="windows" width="18" height="22" patternUnits="userSpaceOnUse">
+              <rect x="5" y="6" width="6" height="8" fill="#78e38c" opacity=".18"/>
+            </pattern>
+          </defs>
+
+          <!-- céu, lua e estrelas -->
+          <rect width="1200" height="300" fill="url(#skyGrad)"/>
+          <circle cx="1090" cy="52" r="24" fill="#dbe9df" opacity=".85"/>
+          <circle cx="1100" cy="46" r="24" fill="#071009"/>
+          <g class="stars" fill="#dbe9df">
+            <circle cx="80" cy="40" r="1.6"/><circle cx="210" cy="70" r="1.2"/><circle cx="330" cy="30" r="1.8"/>
+            <circle cx="470" cy="60" r="1.2"/><circle cx="590" cy="25" r="1.5"/><circle cx="720" cy="55" r="1.2"/>
+            <circle cx="840" cy="35" r="1.7"/><circle cx="960" cy="75" r="1.2"/><circle cx="1160" cy="110" r="1.4"/>
+          </g>
+
+          <!-- cidade ao fundo -->
+          <g class="skyline">
+            <rect x="0" y="120" width="70" height="90" fill="#0c1d15"/><rect x="0" y="120" width="70" height="90" fill="url(#windows)"/>
+            <rect x="80" y="90" width="60" height="120" fill="#0e2118"/><rect x="80" y="90" width="60" height="120" fill="url(#windows)"/>
+            <rect x="150" y="140" width="90" height="70" fill="#0c1d15"/><rect x="150" y="140" width="90" height="70" fill="url(#windows)"/>
+            <rect x="250" y="70" width="55" height="140" fill="#0e2118"/><rect x="250" y="70" width="55" height="140" fill="url(#windows)"/>
+            <rect x="315" y="125" width="80" height="85" fill="#0c1d15"/><rect x="315" y="125" width="80" height="85" fill="url(#windows)"/>
+            <rect x="405" y="100" width="65" height="110" fill="#0e2118"/><rect x="405" y="100" width="65" height="110" fill="url(#windows)"/>
+            <rect x="480" y="150" width="100" height="60" fill="#0c1d15"/><rect x="480" y="150" width="100" height="60" fill="url(#windows)"/>
+            <rect x="590" y="80" width="70" height="130" fill="#0e2118"/><rect x="590" y="80" width="70" height="130" fill="url(#windows)"/>
+            <rect x="670" y="130" width="85" height="80" fill="#0c1d15"/><rect x="670" y="130" width="85" height="80" fill="url(#windows)"/>
+            <rect x="765" y="95" width="60" height="115" fill="#0e2118"/><rect x="765" y="95" width="60" height="115" fill="url(#windows)"/>
+            <rect x="835" y="145" width="95" height="65" fill="#0c1d15"/><rect x="835" y="145" width="95" height="65" fill="url(#windows)"/>
+            <rect x="1045" y="110" width="70" height="100" fill="#0e2118"/><rect x="1045" y="110" width="70" height="100" fill="url(#windows)"/>
+            <rect x="1125" y="135" width="75" height="75" fill="#0c1d15"/><rect x="1125" y="135" width="75" height="75" fill="url(#windows)"/>
+          </g>
+
+          <!-- terra, meio-fio e rua -->
+          <rect x="0" y="206" width="1200" height="24" fill="#1a3324"/>
+          <rect x="0" y="228" width="1200" height="5" fill="#2a4a37"/>
+          <rect x="0" y="233" width="1200" height="67" fill="#121a16"/>
+          <line x1="0" y1="268" x2="1200" y2="268" stroke="#3a4a41" stroke-width="4" stroke-dasharray="44 30"/>
+
+          <!-- PEV -->
+          <g class="pev">
+            <circle class="pev-glow" cx="1130" cy="175" r="70" fill="url(#glowGrad)"/>
+            <rect x="1095" y="150" width="70" height="62" rx="8" fill="#2f8f4f"/>
+            <rect x="1090" y="140" width="80" height="13" rx="4" fill="#3fae63"/>
+            <text x="1130" y="180" text-anchor="middle" font-size="20" fill="#d9ffcc">♻</text>
+            <text x="1130" y="203" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="15" fill="#08110d">PEV</text>
+            <text class="pev-plus" x="1130" y="122" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="15" fill="#b8ff9b">+1 reciclado</text>
+          </g>
+
+          <!-- mancha de contaminação -->
+          <g class="tox">
+            <ellipse cx="715" cy="219" rx="105" ry="13" fill="url(#toxGrad)"/>
+            <ellipse cx="690" cy="226" rx="40" ry="5" fill="#c04bff" opacity=".35"/>
+            <text x="715" y="186" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#e9b6ff">☠ metais pesados no solo</text>
+          </g>
+
+          <!-- celular arremessado -->
+          <g class="thrown-phone">
+            <rect x="-8" y="-13" width="16" height="26" rx="3" fill="#dbe9df"/>
+            <rect x="-6" y="-10" width="12" height="18" rx="1" fill="#1d4a32"/>
+          </g>
+
+          <!-- carro -->
+          <g class="car">
+            <polygon class="beam" points="172,252 330,232 330,284" fill="url(#beamGrad)"/>
+            <path d="M38 250 L60 222 L122 222 L148 250 Z" fill="#a83b3b"/>
+            <path d="M48 248 L64 228 L87 228 L87 248 Z" fill="#9fd3e6" opacity=".55"/>
+            <path d="M93 248 L93 228 L119 228 L136 248 Z" fill="#9fd3e6" opacity=".55"/>
+            <rect x="0" y="248" width="172" height="28" rx="9" fill="#c94b4b"/>
+            <rect x="164" y="254" width="8" height="7" rx="2" fill="#ffe9a6"/>
+            <rect x="0" y="254" width="6" height="7" rx="2" fill="#ff5c5c"/>
+            <g transform="translate(40 278)"><g class="wheel"><circle r="14" fill="#0b0f0d" stroke="#5b6660" stroke-width="3"/><path d="M-9 0 H9 M0 -9 V9" stroke="#5b6660" stroke-width="2"/></g></g>
+            <g transform="translate(134 278)"><g class="wheel"><circle r="14" fill="#0b0f0d" stroke="#5b6660" stroke-width="3"/><path d="M-9 0 H9 M0 -9 V9" stroke="#5b6660" stroke-width="2"/></g></g>
+          </g>
+
+          <!-- caminhão de coleta -->
+          <g class="truck">
+            <rect class="beacon" x="22" y="198" width="16" height="7" rx="2" fill="#ffcc4d"/>
+            <rect x="0" y="205" width="172" height="64" rx="6" fill="#2f8f4f"/>
+            <rect x="0" y="205" width="10" height="64" rx="3" fill="#256f3e"/>
+            <text x="90" y="244" text-anchor="middle" font-size="30" fill="#b8ff9b">♻</text>
+            <text x="90" y="262" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="11" letter-spacing="2" fill="#d9ffcc">COLETA</text>
+            <rect x="172" y="226" width="72" height="43" rx="9" fill="#3fae63"/>
+            <rect x="202" y="233" width="32" height="16" rx="3" fill="#9fd3e6" opacity=".6"/>
+            <rect x="238" y="255" width="7" height="7" rx="2" fill="#ffe9a6"/>
+            <g transform="translate(38 280)"><g class="wheel"><circle r="15" fill="#0b0f0d" stroke="#5b6660" stroke-width="3"/><path d="M-10 0 H10 M0 -10 V10" stroke="#5b6660" stroke-width="2"/></g></g>
+            <g transform="translate(134 280)"><g class="wheel"><circle r="15" fill="#0b0f0d" stroke="#5b6660" stroke-width="3"/><path d="M-10 0 H10 M0 -10 V10" stroke="#5b6660" stroke-width="2"/></g></g>
+            <g transform="translate(212 280)"><g class="wheel"><circle r="15" fill="#0b0f0d" stroke="#5b6660" stroke-width="3"/><path d="M-10 0 H10 M0 -10 V10" stroke="#5b6660" stroke-width="2"/></g></g>
+          </g>
+        </svg>
+
+        <div class="scene-captions" aria-hidden="true">
+          <p class="cap cap-1"><span><b>1.</b> Um celular jogado pela janela…</span></p>
+          <p class="cap cap-2"><span><b>2.</b> …libera metais pesados que contaminam o solo e a água.</span></p>
+          <p class="cap cap-3"><span><b>3.</b> Com a coleta certa, o aparelho volta para o ciclo.</span></p>
+        </div>
+
+        <button class="scene-toggle" id="sceneToggle" type="button" aria-pressed="false">
+          <span class="toggle-icon" aria-hidden="true">❚❚</span> <span class="toggle-text">Pausar animação</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 2. DIAGNÓSTICO AMBIENTAL / IMPACTOS -->
+    <section class="section" id="impactos">
+      <div class="section-heading fade-in">
+        <div>
+          <div class="eyebrow">DIAGNÓSTICO AMBIENTAL</div>
+          <h2>Lixo Eletrônico –<br><em>Impactos do Descarte Inadequado</em></h2>
+        </div>
+        <p>O Lixo Eletrônico (ou e-waste) engloba todos os equipamentos eletroeletrônicos descartados ao fim de sua vida útil sem o devido tratamento técnico.</p>
+      </div>
+
+      <div class="impact-grid">
+        <article class="impact card-animate">
+          <span class="number">01</span>
+          <div class="icon" aria-hidden="true">📱</div>
+          <h3>Exemplos Comuns</h3>
+          <p>Celulares, computadores, cabos, carregadores, baterias, placas de circuito, eletrodomésticos e monitores em desuso.</p>
+        </article>
+        <article class="impact card-animate">
+          <span class="number">02</span>
+          <div class="icon" aria-hidden="true">⚠️</div>
+          <h3>Descarte Incorreto</h3>
+          <p>Quando jogados no lixo comum ou em lixões, esses resíduos sofrem degradação física e contaminam o solo e lençóis freáticos.</p>
+        </article>
+        <article class="impact card-animate">
+          <span class="number">03</span>
+          <div class="icon" aria-hidden="true">☣️</div>
+          <h3>Impactos Ambientais</h3>
+          <p>Vazamento de metais pesados como chumbo, mercúrio e cádmio, afetando a fauna, a flora e a saúde pública.</p>
+        </article>
+      </div>
+
+      <!-- DADOS SOBRE LIXO ELETRÔNICO (Entrega 5) -->
+      <div class="data-block fade-in" aria-labelledby="dados-titulo">
+        <h3 id="dados-titulo" class="data-title">O problema em números</h3>
+        <div class="stats-grid">
+          <div class="stat">
+            <strong><span class="count" data-to="62">62</span><small> mi t</small></strong>
+            <p>de lixo eletrônico foram gerados no mundo em 2022.</p>
+          </div>
+          <div class="stat">
+            <strong><span class="count" data-to="22.3" data-decimals="1">22,3</span><small>%</small></strong>
+            <p>desse total teve coleta e reciclagem documentadas.</p>
+          </div>
+          <div class="stat">
+            <strong><span class="count" data-to="82">82</span><small> mi t</small></strong>
+            <p>é a projeção mundial para 2030 se nada mudar.</p>
+          </div>
+          <div class="stat">
+            <strong><small>US$ </small><span class="count" data-to="91">91</span><small> bi</small></strong>
+            <p>em metais como cobre, ouro e ferro estavam nesse lixo.</p>
+          </div>
+        </div>
+        <div class="brazil-box">
+          <div class="brazil-tag">BRASIL</div>
+          <p>O país gerou cerca de <strong>2,4 milhões de toneladas</strong> de lixo eletrônico em 2022, o equivalente a <strong>11,4 kg por habitante</strong>. Apenas cerca de <strong>3%</strong> desse volume teve coleta formal registrada.</p>
+        </div>
+        <p class="source-note">Fonte: Global E-waste Monitor 2024 (ITU/UNITAR) e base de estatísticas do Global E-waste Statistics Partnership. <a href="#referencias">Ver referências</a></p>
+      </div>
+    </section>
+
+    <!-- 3. REAPROVEITAMENTO SUSTENTÁVEL -->
+    <section class="section alt-bg" id="reaproveitamento">
+      <div class="section-heading fade-in">
+        <div>
+          <div class="eyebrow">ALTERNATIVA AO DESCARTE</div>
+          <h2>Reaproveitamento<br><em>Sustentável</em></h2>
+        </div>
+        <p>Antes de descartar qualquer equipamento, devemos avaliar alternativas para estender seu ciclo de vida e evitar a geração precoce de resíduos.</p>
+      </div>
+
+      <div class="cards-grid">
+        <article class="interactive-card card-animate" tabindex="0">
+          <div class="card-icon" aria-hidden="true">🔄</div>
+          <h3>Ser Reutilizado / Doado</h3>
+          <p>Aparelhos em bom estado podem ser repassados para instituições de ensino, ONGs ou pessoas que necessitam.</p>
+        </article>
+        <article class="interactive-card card-animate" tabindex="0">
+          <div class="card-icon" aria-hidden="true">🛠️</div>
+          <h3>Ser Consertado</h3>
+          <p>Manutenção preventiva, substituição de bateria ou troca de componentes prolongam a vida útil do dispositivo.</p>
+        </article>
+        <article class="interactive-card card-animate" tabindex="0">
+          <div class="card-icon" aria-hidden="true">🧩</div>
+          <h3>Peças Reaproveitadas</h3>
+          <p>Componentes internos funcionais, como memórias e HDs, podem virar peças de reposição para outros sistemas.</p>
+        </article>
+        <article class="interactive-card card-animate" tabindex="0">
+          <div class="card-icon" aria-hidden="true">💡</div>
+          <h3>Outra Utilização</h3>
+          <p>Transformação de smartphones antigos em câmeras de segurança, leitores digitais ou servidores domésticos.</p>
+        </article>
+      </div>
+
+      <!-- ANTES DE DOAR (Entrega 5) -->
+      <div class="checklist-box fade-in">
+        <h3>Antes de doar ou entregar um aparelho</h3>
+        <ul class="checklist">
+          <li><strong>Faça backup</strong> das fotos, contatos e arquivos que quer guardar.</li>
+          <li><strong>Apague seus dados</strong>: restaure o aparelho para as configurações de fábrica e retire chip e cartão de memória. O Decreto nº 10.240/2020 coloca essa tarefa como responsabilidade do consumidor.</li>
+          <li><strong>Saia das suas contas</strong> (Google, Apple ID, redes sociais) para que o próximo usuário consiga usar o aparelho.</li>
+          <li><strong>Junte os acessórios</strong> que funcionam, como carregador e cabo, e teste se o aparelho liga.</li>
+          <li><strong>Escolha o destino</strong>: escolas, ONGs, projetos de inclusão digital ou campanhas de arrecadação da sua cidade e da sua instituição de ensino.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 4. RECICLAGEM E LOGÍSTICA REVERSA -->
+    <section class="section" id="reciclagem">
+      <div class="section-heading fade-in">
+        <div>
+          <div class="eyebrow">PROCESSO TÉCNICO</div>
+          <h2>Reciclagem e<br><em>Logística Reversa</em></h2>
+        </div>
+        <p>A <strong>Reciclagem de Eletrônicos</strong> recupera matérias-primas valiosas (como ouro, cobre e plástico), enquanto a <strong>Logística Reversa</strong> garante que os produtos retornem ao ciclo produtivo com segurança ambiental.</p>
+      </div>
+
+      <div class="flow-container fade-in">
+        <h3 class="flow-title">Fluxo de Destinação Adequada</h3>
+        <p class="flow-hint">Toque em cada etapa para saber mais.</p>
+        <div class="flow-steps" role="tablist" aria-label="Etapas da destinação adequada">
+          <button class="flow-step active" type="button" role="tab" id="tab-1" aria-controls="flowDetail" aria-selected="true" data-step="1">
+            <span class="step-num">1</span>
+            <strong>Uso do Produto</strong>
+            <small>Utilização consciente</small>
+          </button>
+          <div class="flow-arrow" aria-hidden="true">→</div>
+          <button class="flow-step" type="button" role="tab" id="tab-2" aria-controls="flowDetail" aria-selected="false" tabindex="-1" data-step="2">
+            <span class="step-num">2</span>
+            <strong>Descarte Correto</strong>
+            <small>Separação pelo usuário</small>
+          </button>
+          <div class="flow-arrow" aria-hidden="true">→</div>
+          <button class="flow-step" type="button" role="tab" id="tab-3" aria-controls="flowDetail" aria-selected="false" tabindex="-1" data-step="3">
+            <span class="step-num">3</span>
+            <strong>Ponto de Coleta</strong>
+            <small>Entrega no PEV</small>
+          </button>
+          <div class="flow-arrow" aria-hidden="true">→</div>
+          <button class="flow-step" type="button" role="tab" id="tab-4" aria-controls="flowDetail" aria-selected="false" tabindex="-1" data-step="4">
+            <span class="step-num">4</span>
+            <strong>Triagem</strong>
+            <small>Separação de materiais</small>
+          </button>
+          <div class="flow-arrow" aria-hidden="true">→</div>
+          <button class="flow-step" type="button" role="tab" id="tab-5" aria-controls="flowDetail" aria-selected="false" tabindex="-1" data-step="5">
+            <span class="step-num">5</span>
+            <strong>Reciclagem / Reaproveitamento</strong>
+            <small>Retorno à indústria</small>
+          </button>
+        </div>
+        <div class="flow-detail" id="flowDetail" role="tabpanel" aria-labelledby="tab-1" aria-live="polite">
+          <strong>Uso do produto:</strong> escolher aparelhos duráveis, usar capa e película, manter o sistema atualizado e cuidar da bateria fazem o equipamento durar mais e adiam o descarte.
+        </div>
+      </div>
+
+      <!-- LEGISLAÇÃO (Entrega 5) -->
+      <div class="law-grid">
+        <article class="law-card fade-in">
+          <span class="law-tag">LEI Nº 12.305/2010</span>
+          <h3>Política Nacional de Resíduos Sólidos (PNRS)</h3>
+          <p>Cria a <strong>responsabilidade compartilhada</strong> pelo ciclo de vida dos produtos: fabricantes, importadores, distribuidores, comerciantes, consumidores e poder público têm, cada um, uma parte no destino correto dos resíduos.</p>
+          <p>Torna obrigatória a <strong>logística reversa</strong> para produtos eletroeletrônicos e seus componentes, além de pilhas e baterias.</p>
+        </article>
+        <article class="law-card fade-in">
+          <span class="law-tag">DECRETO Nº 10.240/2020</span>
+          <h3>Logística reversa de eletroeletrônicos domésticos</h3>
+          <p>Regulamenta como o sistema funciona na prática:</p>
+          <ul>
+            <li><strong>Consumidor:</strong> separa o aparelho do lixo comum, apaga seus dados e entrega o produto desligado em um ponto de recebimento.</li>
+            <li><strong>Comércio:</strong> recebe os produtos descartados, inclusive nas vendas pela internet, e informa o consumidor.</li>
+            <li><strong>Fabricantes e importadores:</strong> dão destino adequado, de preferência a reciclagem, a tudo o que o sistema recolher.</li>
+            <li><strong>Meta de cobertura:</strong> pelo menos um ponto de recebimento para cada 25 mil habitantes nos municípios atendidos.</li>
+          </ul>
+        </article>
+      </div>
+      <p class="source-note">Fonte: Lei nº 12.305/2010 e Decreto nº 10.240/2020. <a href="#referencias">Ver referências</a></p>
+    </section>
+
+    <!-- 5. CONSCIENTIZAÇÃO E DESAFIO INTERATIVO -->
+    <section class="section alt-bg" id="conscientizacao">
+      <div class="section-heading fade-in">
+        <div>
+          <div class="eyebrow">ENGAJAMENTO</div>
+          <h2>Conscientização:<br><em>Pequenas Atitudes</em></h2>
+        </div>
+        <p>A mudança real depende de ações diárias e do engajamento de toda a comunidade.</p>
+      </div>
+
+      <div class="tips-grid">
+        <article class="tip-card card-animate">
+          <span>01</span>
+          <h3>Lixo Comum Jamais</h3>
+          <p>Nunca jogue eletrônicos, pilhas ou cabos na coleta doméstica tradicional.</p>
+        </article>
+        <article class="tip-card card-animate">
+          <span>02</span>
+          <h3>Pontos de Coleta (PEVs)</h3>
+          <p>Procure postos de coleta especializada em sua cidade ou em lojas do varejo.</p>
+        </article>
+        <article class="tip-card card-animate">
+          <span>03</span>
+          <h3>Conserte Antes de Trocar</h3>
+          <p>Avalie se um pequeno reparo não devolve o funcionamento original do equipamento.</p>
+        </article>
+        <article class="tip-card card-animate">
+          <span>04</span>
+          <h3>Doe Eletrônicos Úteis</h3>
+          <p>Se o aparelho ainda funciona, passe adiante para quem precisa.</p>
+        </article>
+        <article class="tip-card card-animate">
+          <span>05</span>
+          <h3>Separe Pilhas e Baterias</h3>
+          <p>Deposite pilhas e baterias em coletores específicos para resíduos perigosos.</p>
+        </article>
+        <article class="tip-card card-animate">
+          <span>06</span>
+          <h3>Compartilhe Informação</h3>
+          <p>Multiplique a mensagem sobre o descarte responsável em sua comunidade.</p>
+        </article>
+      </div>
+
+      <!-- MITO OU VERDADE -->
+      <div class="myths fade-in" aria-labelledby="mitos-titulo">
+        <div class="myths-head">
+          <div class="eyebrow">MITO OU VERDADE?</div>
+          <h3 id="mitos-titulo">Teste o que você sabe. Toque na carta para virar.</h3>
+        </div>
+        <div class="myth-grid">
+          <button class="myth-card" type="button" aria-expanded="false">
+            <span class="myth-front"><span class="myth-q">"Posso jogar pilha usada no lixo de casa."</span><span class="myth-tap">Toque para ver</span></span>
+            <span class="myth-back myth-false"><b>MITO</b>Pilhas e baterias têm substâncias tóxicas e devem ir para coletores específicos, nunca para o lixo comum.</span>
+          </button>
+          <button class="myth-card" type="button" aria-expanded="false">
+            <span class="myth-front"><span class="myth-q">"A loja que vende eletrônicos deve receber o meu aparelho velho."</span><span class="myth-tap">Toque para ver</span></span>
+            <span class="myth-back myth-true"><b>VERDADE</b>O Decreto nº 10.240/2020 obriga o comércio a receber os eletroeletrônicos descartados pelo consumidor.</span>
+          </button>
+          <button class="myth-card" type="button" aria-expanded="false">
+            <span class="myth-front"><span class="myth-q">"Um eletrônico quebrado não vale mais nada."</span><span class="myth-tap">Toque para ver</span></span>
+            <span class="myth-back myth-false"><b>MITO</b>O lixo eletrônico gerado no mundo em 2022 continha cerca de US$ 91 bilhões em metais como cobre, ouro e ferro.</span>
+          </button>
+          <button class="myth-card" type="button" aria-expanded="false">
+            <span class="myth-front"><span class="myth-q">"Menos de um quarto do lixo eletrônico do mundo é reciclado de forma documentada."</span><span class="myth-tap">Toque para ver</span></span>
+            <span class="myth-back myth-true"><b>VERDADE</b>Em 2022, apenas 22,3% teve coleta e reciclagem documentadas, segundo o Global E-waste Monitor 2024.</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ONDE DESCARTAR (Entrega 5) -->
+      <div class="where-box fade-in" id="onde-descartar">
+        <div class="where-copy">
+          <div class="eyebrow">ONDE DESCARTAR</div>
+          <h3>Como encontrar um ponto de coleta (PEV)</h3>
+          <p>Não existe um mapa único e completo de pontos de coleta no Brasil. Mesmo assim, há caminhos confiáveis para achar o mais próximo de você:</p>
+        </div>
+        <ol class="where-steps">
+          <li>
+            <strong>Pergunte na loja</strong>
+            <span>Pela lei, o comércio que vende eletroeletrônicos deve receber os aparelhos descartados. Lojas de eletrônicos, supermercados e operadoras de celular costumam ter coletores.</span>
+          </li>
+          <li>
+            <strong>Use os localizadores das gestoras</strong>
+            <span>As entidades que operam a logística reversa do setor mantêm buscas de pontos por cidade: <a href="https://abree.org.br/" target="_blank" rel="noopener noreferrer">ABREE<span class="sr-only"> (abre em nova aba)</span></a> e <a href="https://greeneletron.org.br/" target="_blank" rel="noopener noreferrer">Green Eletron<span class="sr-only"> (abre em nova aba)</span></a>.</span>
+          </li>
+          <li>
+            <strong>Consulte a prefeitura</strong>
+            <span>Muitas cidades têm ecopontos ou fazem campanhas e "drive-thrus" de coleta de eletrônicos ao longo do ano.</span>
+          </li>
+          <li>
+            <strong>Pilhas e baterias à parte</strong>
+            <span>Elas têm coletores próprios, normalmente em supermercados, farmácias e lojas de eletrônicos.</span>
+          </li>
+        </ol>
+      </div>
+
+      <div class="callout fade-in">
+        <p class="callout-text">"Uma escolha consciente começa antes do descarte."</p>
+        <a class="button primary" href="#sustentabilidade">Quero fazer minha parte <span aria-hidden="true">→</span></a>
+      </div>
+
+      <!-- DESAFIO TECNOCICLO -->
+      <div class="challenge" id="desafio">
+        <div class="challenge-copy fade-in">
+          <div class="eyebrow">DESAFIO TECNOCICLO</div>
+          <h2>Que tipo de usuário<br><em>você é?</em></h2>
+          <p>Responda às 5 perguntas para descobrir como suas escolhas impactam o meio ambiente. No final, você vê a explicação de cada resposta.</p>
+          <ul class="quiz-legend" aria-hidden="true">
+            <li><i class="dot ok"></i> ótima escolha</li>
+            <li><i class="dot mid"></i> dá para melhorar</li>
+            <li><i class="dot bad"></i> atenção</li>
+          </ul>
+        </div>
+
+        <div class="quiz-app fade-in" id="quizApp">
+          <noscript><p>O desafio precisa de JavaScript ativado no navegador.</p></noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. SUSTENTABILIDADE -->
+    <section class="section" id="sustentabilidade">
+      <div class="section-heading fade-in">
+        <div>
+          <div class="eyebrow">FECHAMENTO DA CAMPANHA</div>
+          <h2>Sustentabilidade<br><em>no Ciclo Digital</em></h2>
+        </div>
+        <p>A união entre avanço tecnológico e responsabilidade ambiental forma a base da verdadeira sustentabilidade.</p>
+      </div>
+
+      <div class="formula-box fade-in">
+        <div class="formula-item">TECNOLOGIA</div>
+        <div class="formula-plus" aria-hidden="true">+</div>
+        <div class="formula-item">CONSUMO CONSCIENTE</div>
+        <div class="formula-plus" aria-hidden="true">+</div>
+        <div class="formula-item">REAPROVEITAMENTO</div>
+        <div class="formula-plus" aria-hidden="true">+</div>
+        <div class="formula-item">RECICLAGEM</div>
+        <div class="formula-equals" aria-hidden="true">=</div>
+        <div class="formula-result">SUSTENTABILIDADE</div>
+      </div>
+
+      <div class="final-cta fade-in">
+        <p class="final-message">Pequenas atitudes ajudam a construir um futuro mais sustentável. Faça a sua parte no dia a dia!</p>
+        <div class="share-row">
+          <button class="button primary" id="shareBtn" type="button">Compartilhar a campanha <span aria-hidden="true">↗</span></button>
+          <a class="button ghost" href="#inicio">Voltar ao início <span aria-hidden="true">↑</span></a>
+        </div>
+        <p class="share-msg" id="shareMsg" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- 7. REFERÊNCIAS (Entrega 5) -->
+    <section class="section alt-bg" id="referencias">
+      <div class="section-heading fade-in">
+        <div>
+          <div class="eyebrow">RASTREABILIDADE</div>
+          <h2>Referências<br><em>e Fontes</em></h2>
+        </div>
+        <p>Os dados e as informações legais apresentados nesta campanha vêm das fontes abaixo. Clique para consultar o original.</p>
+      </div>
+
+      <ol class="ref-list fade-in">
+        <li>BALDÉ, C. P. et al. <em>The Global E-waste Monitor 2024</em>. Genebra/Bonn: International Telecommunication Union (ITU); United Nations Institute for Training and Research (UNITAR), 2024. Disponível em: <a href="https://www.itu.int/en/ITU-D/Environment/Pages/Publications/The-Global-E-Waste-Monitor-2024.aspx" target="_blank" rel="noopener noreferrer">itu.int</a>. Acesso em: 20 out. 2026.</li>
+        <li>GLOBAL E-WASTE STATISTICS PARTNERSHIP. <em>E-waste statistics: Brazil, 2022</em>. Disponível em: <a href="https://globalewaste.org/statistics/country/brazil/2022" target="_blank" rel="noopener noreferrer">globalewaste.org</a>. Acesso em: 20 out. 2026.</li>
+        <li>BRASIL. Lei nº 12.305, de 2 de agosto de 2010. Institui a Política Nacional de Resíduos Sólidos. Brasília, DF, 2010. Disponível em: <a href="https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12305.htm" target="_blank" rel="noopener noreferrer">planalto.gov.br</a>. Acesso em: 20 out. 2026.</li>
+        <li>BRASIL. Decreto nº 10.240, de 12 de fevereiro de 2020. Regulamenta a implementação de sistema de logística reversa de produtos eletroeletrônicos de uso doméstico e seus componentes. Brasília, DF, 2020. Disponível em: <a href="https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/decreto/d10240.htm" target="_blank" rel="noopener noreferrer">planalto.gov.br</a>. Acesso em: 20 out. 2026.</li>
+        <li>ABREE – Associação Brasileira de Reciclagem de Eletroeletrônicos e Eletrodomésticos. Disponível em: <a href="https://abree.org.br/" target="_blank" rel="noopener noreferrer">abree.org.br</a>. Acesso em: 20 out. 2026.</li>
+        <li>GREEN ELETRON – Gestora para Logística Reversa de Equipamentos Eletroeletrônicos. Disponível em: <a href="https://greeneletron.org.br/" target="_blank" rel="noopener noreferrer">greeneletron.org.br</a>. Acesso em: 20 out. 2026.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong>TecnoCiclo</strong> <span>— Campanha de Sustentabilidade Tecnológica</span></div>
+    <small>Projeto Integrador II • Álvaro Pavelkonski Soares e Micaelly Santos Delmonde • <a href="https://github.com/Alvaro-Pavelkonski/Projeto-Integrador-II-Sustentabilidade-Tecnol-gica" target="_blank" rel="noopener noreferrer">Código no GitHub</a></small>
+  </footer>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Voltar ao topo">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
