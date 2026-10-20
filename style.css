@@ -629,12 +629,13 @@ h1 em, h2 em {
 
 .checklist {
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 14px 28px;
+  columns: 2;
+  column-gap: 40px;
 }
 
 .checklist li {
+  break-inside: avoid;
+  margin-bottom: 14px;
   position: relative;
   padding-left: 32px;
   color: #c4d4c8;
@@ -1167,8 +1168,8 @@ footer strong {
 
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .law-grid,
-  .where-box,
-  .checklist { grid-template-columns: 1fr; }
+  .where-box { grid-template-columns: 1fr; }
+  .checklist { columns: 1; }
   .where-box { gap: 20px; }
 }
 
