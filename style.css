@@ -1217,7 +1217,9 @@ footer strong {
   }
 
   .eco-badge {
-    right: 10px;
+    right: 0;
+    top: 14%;
+    bottom: auto;
   }
 }
 
