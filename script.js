@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const flowDetails = {
     1: '<strong>Uso do produto:</strong> escolher aparelhos duráveis, usar capa e película, manter o sistema atualizado e cuidar da bateria fazem o equipamento durar mais e adiam o descarte.',
     2: '<strong>Descarte correto:</strong> separe o aparelho do lixo comum, faça backup, apague seus dados e entregue o produto desligado. Pilhas e baterias vão em coletores próprios.',
-    3: '<strong>Ponto de coleta:</strong> o aparelho é deixado em um PEV, na loja que vende eletrônicos ou em um ecoponto da prefeitura. O comércio é obrigado a receber esses produtos.',
+    3: '<strong>Ponto de coleta:</strong> o aparelho é deixado em um PEV, na loja que vende eletrônicos ou em um ecoponto da prefeitura. Muitas lojas de eletrônicos têm coletores para isso.',
     4: '<strong>Triagem:</strong> os aparelhos são separados por tipo e desmontados. Componentes perigosos, como baterias, são retirados com segurança antes da reciclagem.',
     5: '<strong>Reciclagem e reaproveitamento:</strong> metais como cobre, ouro e ferro, além de plásticos e vidro, voltam para a indústria como matéria-prima, fechando o ciclo.'
   };
@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       q: 'Na hora de descartar um eletrônico quebrado, você...',
       options: ['Coloca junto com o lixo comum', 'Deixa na calçada para alguém levar', 'Leva a um ponto de coleta ou à loja'],
-      why: 'Eletrônicos têm metais pesados e não devem ir para o lixo comum nem ficar na rua. A lei garante que lojas e pontos de coleta recebam esses produtos.'
+      why: 'Eletrônicos têm metais pesados e não devem ir para o lixo comum nem ficar na rua. O destino certo é um ponto de coleta ou uma loja com coletor.'
     },
     {
       q: 'E as pilhas e baterias usadas?',

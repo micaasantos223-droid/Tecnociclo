@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="TecnoCiclo — Campanha de conscientização sobre sustentabilidade e descarte correto de lixo eletrônico.">
-  <meta name="theme-color" content="#08110d">
+  <meta name="theme-color" content="#f3f6f1">
   <meta property="og:type" content="website">
   <meta property="og:title" content="TecnoCiclo | Tecnologia que continua">
   <meta property="og:description" content="Campanha sobre o descarte correto de lixo eletrônico: dados, legislação, onde descartar e um desafio interativo.">
   <meta property="og:url" content="https://alvaro-pavelkonski.github.io/Projeto-Integrador-II-Sustentabilidade-Tecnol-gica/">
   <meta property="og:locale" content="pt_BR">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2378e38c'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='26' text-anchor='middle' fill='%2308110d'%3ETC%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232f8f4f'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='26' text-anchor='middle' fill='%23ffffff'%3ETC%3C/text%3E%3C/svg%3E">
   <title>TecnoCiclo | Campanha de Sustentabilidade Tecnológica</title>
   <link rel="stylesheet" href="style.css">
   <script>document.documentElement.classList.add('js');</script>
@@ -51,11 +51,20 @@
           <a class="button primary" href="#cena">Conheça a campanha <span aria-hidden="true">↓</span></a>
           <a class="button ghost" href="#desafio">Fazer o desafio</a>
         </div>
-        <ul class="hero-stats" aria-label="Destaques em números">
-          <li><strong>62 milhões</strong><span>de toneladas de lixo eletrônico no mundo em 2022</span></li>
-          <li><strong>22,3%</strong><span>com reciclagem documentada</span></li>
-          <li><strong>3%</strong><span>de coleta formal no Brasil</span></li>
-        </ul>
+        <nav class="hero-links" aria-label="Atalhos da campanha">
+          <a href="#onde-descartar">
+            <span class="hl-icon" aria-hidden="true">📍</span>
+            <span><strong>Onde descartar</strong><small>Como achar um ponto de coleta</small></span>
+          </a>
+          <a href="#mitos">
+            <span class="hl-icon" aria-hidden="true">❓</span>
+            <span><strong>Mito ou verdade?</strong><small>Teste o que você sabe</small></span>
+          </a>
+          <a href="#antes-de-doar">
+            <span class="hl-icon" aria-hidden="true">📱</span>
+            <span><strong>Antes de doar</strong><small>5 passos para o seu aparelho</small></span>
+          </a>
+        </nav>
       </div>
       <div class="device-art fade-in" role="img" aria-label="Ilustração de um celular com a marca TecnoCiclo e o lema Reduza, Reutilize, Recicle">
         <div class="orb orb-one"></div>
@@ -297,7 +306,7 @@
       </div>
 
       <!-- ANTES DE DOAR (Entrega 5) -->
-      <div class="checklist-box fade-in">
+      <div class="checklist-box fade-in" id="antes-de-doar">
         <h3>Antes de doar ou entregar um aparelho</h3>
         <ul class="checklist">
           <li><strong>Faça backup</strong> das fotos, contatos e arquivos que quer guardar.</li>
@@ -425,26 +434,26 @@
       </div>
 
       <!-- MITO OU VERDADE -->
-      <div class="myths fade-in" aria-labelledby="mitos-titulo">
+      <div class="myths fade-in" id="mitos" aria-labelledby="mitos-titulo">
         <div class="myths-head">
           <div class="eyebrow">MITO OU VERDADE?</div>
           <h3 id="mitos-titulo">Teste o que você sabe. Toque na carta para virar.</h3>
         </div>
         <div class="myth-grid">
           <button class="myth-card" type="button" aria-expanded="false">
-            <span class="myth-front"><span class="myth-q">"Posso jogar pilha usada no lixo de casa."</span><span class="myth-tap">Toque para ver</span></span>
+            <span class="myth-front"><span class="myth-q">“Posso jogar pilha usada no lixo de casa.”</span><span class="myth-tap">Toque para ver</span></span>
             <span class="myth-back myth-false"><b>MITO</b>Pilhas e baterias têm substâncias tóxicas e devem ir para coletores específicos, nunca para o lixo comum.</span>
           </button>
           <button class="myth-card" type="button" aria-expanded="false">
-            <span class="myth-front"><span class="myth-q">"A loja que vende eletrônicos deve receber o meu aparelho velho."</span><span class="myth-tap">Toque para ver</span></span>
-            <span class="myth-back myth-true"><b>VERDADE</b>O Decreto nº 10.240/2020 obriga o comércio a receber os eletroeletrônicos descartados pelo consumidor.</span>
+            <span class="myth-front"><span class="myth-q">“O Brasil coleta formalmente só cerca de 3% do lixo eletrônico que gera.”</span><span class="myth-tap">Toque para ver</span></span>
+            <span class="myth-back myth-true"><b>VERDADE</b>Em 2022, o Brasil gerou cerca de 2,4 milhões de toneladas de lixo eletrônico, e só cerca de 3% teve coleta formal registrada.</span>
           </button>
           <button class="myth-card" type="button" aria-expanded="false">
-            <span class="myth-front"><span class="myth-q">"Um eletrônico quebrado não vale mais nada."</span><span class="myth-tap">Toque para ver</span></span>
+            <span class="myth-front"><span class="myth-q">“Um eletrônico quebrado não vale mais nada.”</span><span class="myth-tap">Toque para ver</span></span>
             <span class="myth-back myth-false"><b>MITO</b>O lixo eletrônico gerado no mundo em 2022 continha cerca de US$ 91 bilhões em metais como cobre, ouro e ferro.</span>
           </button>
           <button class="myth-card" type="button" aria-expanded="false">
-            <span class="myth-front"><span class="myth-q">"Menos de um quarto do lixo eletrônico do mundo é reciclado de forma documentada."</span><span class="myth-tap">Toque para ver</span></span>
+            <span class="myth-front"><span class="myth-q">“Menos de um quarto do lixo eletrônico do mundo é reciclado de forma documentada.”</span><span class="myth-tap">Toque para ver</span></span>
             <span class="myth-back myth-true"><b>VERDADE</b>Em 2022, apenas 22,3% teve coleta e reciclagem documentadas, segundo o Global E-waste Monitor 2024.</span>
           </button>
         </div>
@@ -460,7 +469,7 @@
         <ol class="where-steps">
           <li>
             <strong>Pergunte na loja</strong>
-            <span>Pela lei, o comércio que vende eletroeletrônicos deve receber os aparelhos descartados. Lojas de eletrônicos, supermercados e operadoras de celular costumam ter coletores.</span>
+            <span>Lojas de eletrônicos, supermercados e operadoras de celular costumam ter coletores. Vale perguntar na loja onde você comprou o aparelho.</span>
           </li>
           <li>
             <strong>Use os localizadores das gestoras</strong>
